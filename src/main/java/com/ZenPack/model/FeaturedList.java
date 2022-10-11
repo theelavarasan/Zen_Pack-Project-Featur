@@ -1,5 +1,6 @@
 package com.ZenPack.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 
 import javax.persistence.*;
@@ -13,6 +14,7 @@ import java.util.Date;
 @Getter
 @Setter
 @Table(name = "Featured_List")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class FeaturedList {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

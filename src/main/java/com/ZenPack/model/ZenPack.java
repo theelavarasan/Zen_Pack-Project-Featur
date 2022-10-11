@@ -1,5 +1,6 @@
 package com.ZenPack.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
@@ -14,6 +15,7 @@ import java.util.List;
 @Entity
 @Table(name = "zen_pack")
 @Builder
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ZenPack {
 
     @Id
